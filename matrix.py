@@ -1,4 +1,5 @@
 import numpy as np
+#untuk menjalankan program ini, download di PC anda Python dan library Numpy
 
 print("menyelesaikan persamaan linear 3 variabel menggunakan metode matrix")
 
