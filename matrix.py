@@ -1,69 +1,69 @@
 import numpy as np
-#untuk menjalankan program ini, download di PC anda Python dan library Numpy
+#untuk menjalankan program ini, lo harus install dulu library Numpy
 
-print("menyelesaikan persamaan linear 3 variabel menggunakan metode matrix")
+print("menyelesaikan persamaan linear 3 variabel sederhana menggunakan metode matrix")
 
 print("\n========================================")
 
 print("\nmasukan persamaan pertama")
 a = input("nilai matriks baris 1 kolom 1 : ")
-a = int(a)
+a = float(a)
 b = input("nilai matriks baris 1 kolom 2 : ")
-b = int(b)
+b = float(b)
 c = input("nilai matriks baris 1 kolom 3 : ")
-c = int(c)
+c = float(c)
 
 j = input("masukan nilai dari persamaan 1 : ")
-j = int(j)
+j = float(j)
 
 print("\n========================================")
 
 print("\nmasukan persamaan kedua")
 d = input("nilai matriks baris 2 kolom 1 : ")
-d = int(d)
+d = float(d)
 e = input("nilai matriks baris 2 kolom 2 : ")
-e = int(e)
+e = float(e)
 f = input("nilai matriks baris 2 kolom 3 : ")
-f = int(f)
+f = float(f)
 
 k = input("masukan nilai dari persamaan 2 : ")
-k = int(k)
+k = float(k)
 
 print("\n========================================")
 
 print("\nmasukan persamaan ketiga")
 g = input("nilai matriks baris 3 kolom 1 : ")
-g = int(g)
+g = float(g)
 h = input("nilai matriks baris 3 kolom 2 : ")
-h = int(h)
+h = float(h)
 i = input("nilai matriks baris 3 kolom 3 : ")
-i = int(i)
+i = float(i)
 
 l = input("masukan nilai dari persamaan 3 : ")
-l = int(l)
+l = float(l)
 
 matrix1 = np.array([[a, b, c], [d, e, f], [g, h, i]])
 det1 = np.linalg.det(matrix1)
-det1 = int(det1)
+det1 = float(det1)
 
 matrixX = np.array([[j, b, c], [k, e, f], [l, h, i]])
 detX = np.linalg.det(matrixX)
-detX = int(detX)
+detX = float(detX)
 
 matrixY = np.array([[a, j, c], [d, k, f], [g, l, i]])
 detY = np.linalg.det(matrixY)
-detY = int(detY)
+detY = float(detY)
 
 matrixZ = np.array([[a, b, j], [d, e, k], [g, h, l]])
 detZ = np.linalg.det(matrixZ)
-detZ = int(detZ)
+detZ = float(detZ)
 
 nilai_x = detX / det1
-nilai_x = int(nilai_x)
+nilai_x = round(nilai_x)
 nilai_y = detY / det1
-nilai_y = int(nilai_y)
+nilai_y = round(nilai_y)
 nilai_z = detZ / det1
-nilai_z = int(nilai_z)
+nilai_z = round(nilai_z)
 
 print("\n========================================")
 
