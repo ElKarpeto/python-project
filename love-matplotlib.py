@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+#untuk menjalankan program ini, kamu harus meng-install library numpy dan matplotlib
 
 # untuk membuat tulisan pada grafik
 tulisan = input('isi tulisan pada grafik : ')
