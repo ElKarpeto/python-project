@@ -17,12 +17,12 @@ f = float(input('masukan nilai persamaan 2 : '))
 
 print("\n==================================================\n")
 
-matrix_1 = np.array([[a, b], [c, d]])
-matrix_2 = np.array([[e], [f]])
+matrix_1 = np.array([[a, b], [c, d]]) # membuat matrix 2 x 2
+matrix_2 = np.array([[e], [f]]) # membuat matrix 2 x 1
 
-inv_1 = np.linalg.inv(matrix_1)
+inv_1 = np.linalg.inv(matrix_1) # invers matrix 1
 
-ans_matrix = np.matmul(inv_1, matrix_2)
+ans_matrix = np.matmul(inv_1, matrix_2) # mengkalikan invers matrix 1 dengan matrix 2
 
 x = round(ans_matrix[0, 0])
 y = round(ans_matrix[1, 0])
