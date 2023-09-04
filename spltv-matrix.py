@@ -67,13 +67,11 @@ nilai_z = round(nilai_z)
 
 print("\n========================================")
 
-print("\nnilai x = ")
-print(nilai_x)
+print(f"\nnilai x = {nilai_x}")
 
-print("\nnilai y = ")
-print(nilai_y)
+print(f"\nnilai y = {nilai_y}")
 
-print("\nnilai z = ")
-print(nilai_z)
+
+print(f"\nnilai z = {nilai_z}")
 
 input("tekan 'enter' untuk keluar")
