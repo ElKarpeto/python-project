@@ -1,69 +1,55 @@
 import numpy as np
-#untuk menjalankan program ini, lo harus install dulu library Numpy
 
 print("menyelesaikan persamaan linear 3 variabel sederhana menggunakan metode matrix")
 
+# input nilai-nilai SPLTV menjadi matrix augmented
 print("\n========================================")
 
 print("\nmasukan persamaan pertama")
-a = input("nilai matriks baris 1 kolom 1 : ")
-a = float(a)
-b = input("nilai matriks baris 1 kolom 2 : ")
-b = float(b)
-c = input("nilai matriks baris 1 kolom 3 : ")
-c = float(c)
+a = float(input("nilai matriks baris 1 kolom 1 : "))
+b = float(input("nilai matriks baris 1 kolom 2 : "))
+c = float(input("nilai matriks baris 1 kolom 3 : "))
 
-j = input("masukan nilai dari persamaan 1 : ")
-j = float(j)
+j = float(input("masukan nilai dari persamaan 1 : "))
 
 print("\n========================================")
 
 print("\nmasukan persamaan kedua")
-d = input("nilai matriks baris 2 kolom 1 : ")
-d = float(d)
-e = input("nilai matriks baris 2 kolom 2 : ")
-e = float(e)
-f = input("nilai matriks baris 2 kolom 3 : ")
-f = float(f)
+d = float(input("nilai matriks baris 2 kolom 1 : "))
+e = float(input("nilai matriks baris 2 kolom 2 : "))
+f = float(input("nilai matriks baris 2 kolom 3 : "))
 
-k = input("masukan nilai dari persamaan 2 : ")
-k = float(k)
+k = float(input("masukan nilai dari persamaan 2 : "))
+
 
 print("\n========================================")
 
 print("\nmasukan persamaan ketiga")
-g = input("nilai matriks baris 3 kolom 1 : ")
-g = float(g)
-h = input("nilai matriks baris 3 kolom 2 : ")
-h = float(h)
-i = input("nilai matriks baris 3 kolom 3 : ")
-i = float(i)
+g = float(input("nilai matriks baris 3 kolom 1 : "))
+h = float(input("nilai matriks baris 3 kolom 2 : "))
+i = float(input("nilai matriks baris 3 kolom 3 : "))
 
-l = input("masukan nilai dari persamaan 3 : ")
-l = float(l)
+l = float(input("masukan nilai dari persamaan 3 : "))
 
+# kita create matrix base nya
 matrix1 = np.array([[a, b, c], [d, e, f], [g, h, i]])
-det1 = np.linalg.det(matrix1)
-det1 = float(det1)
+
+det1 = float(np.linalg.det(matrix1))
+
 
 matrixX = np.array([[j, b, c], [k, e, f], [l, h, i]])
-detX = np.linalg.det(matrixX)
-detX = float(detX)
+detX = float(np.linalg.det(matrixX))
+
 
 matrixY = np.array([[a, j, c], [d, k, f], [g, l, i]])
-detY = np.linalg.det(matrixY)
-detY = float(detY)
+detY = float(np.linalg.det(matrixY))
 
 matrixZ = np.array([[a, b, j], [d, e, k], [g, h, l]])
-detZ = np.linalg.det(matrixZ)
-detZ = float(detZ)
+detZ = float(np.linalg.det(matrixZ))
 
-nilai_x = detX / det1
-nilai_x = round(nilai_x)
-nilai_y = detY / det1
-nilai_y = round(nilai_y)
-nilai_z = detZ / det1
-nilai_z = round(nilai_z)
+nilai_x = round(detX / det1)
+nilai_y = round(detY / det1)
+nilai_z = round(detZ / det1)
 
 print("\n========================================")
 
@@ -71,7 +57,8 @@ print(f"\nnilai x = {nilai_x}")
 
 print(f"\nnilai y = {nilai_y}")
 
-
 print(f"\nnilai z = {nilai_z}")
+
+print("\n========================================")
 
 input("tekan 'enter' untuk keluar")
