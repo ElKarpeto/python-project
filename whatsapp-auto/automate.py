@@ -4,15 +4,14 @@ import csv
 try:
     with open(r"/home/al/python-project/whatsapp-auto/data.csv", "r", encoding="utf-8") as data :
         read_data = csv.reader(data)
+        counter = 1
         for name, number, email, password in read_data :
             name = name.strip()
-            
             number = number.strip()
             if number.startswith('0'):
                 number = '+62' + number[1:]
             elif number.startswith('62'):
                 number = '+' + number
-            
             email = email.strip()
             password = password.strip()
 
@@ -31,6 +30,7 @@ Kesekretariatan Schematics 2024.
 
             '''.format(nama=name, email_peserta=email, pass_peserta=password)
             pw.sendwhatmsg_instantly(number, msg, 15, True, 8)
+            print(f"[debug] : {counter}. sending successfully to {name} with {number}")
 
 except FileNotFoundError:
     print("One or both of the text files are not found.")
